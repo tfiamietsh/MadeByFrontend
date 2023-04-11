@@ -1,0 +1,32 @@
+<app-logo></app-logo>
+<div class="card">
+    <div class="header">
+        <p>Вход</p>
+    </div>
+    <form [formGroup]="loginForm">
+        <div>
+            <mat-form-field class="field" appearance="outline">
+                <mat-label>Имя пользователя</mat-label>
+                <input formControlName="username" matInput placeholder="Введите имя пользователя" required />
+            </mat-form-field>
+        </div>
+        <mat-form-field class="field" appearance="outline">
+            <mat-label>Пароль</mat-label>
+            <input formControlName="password" matInput [type]="hide ? 'password' : 'text'" placeholder="Введите пароль"
+                required type="password" />
+            <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+                [attr.aria-pressed]="hide">
+                <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+            </button>
+        </mat-form-field>
+    </form>
+    <div class="container">
+        <button class="button noborder" [disabled]="!loginForm.valid" (click)="onSubmit()" mat-stroked-button
+            color="primary">
+            <p class="text">Войти</p>
+        </button>
+    </div>
+    <br>
+    <mat-error *ngIf="error" class="error">{{error}}</mat-error>
+    <br>
+</div>

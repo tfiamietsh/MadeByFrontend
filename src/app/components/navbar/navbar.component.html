@@ -1,0 +1,26 @@
+<mat-toolbar>
+    <span routerLink="/" class="l-padding">made_by</span>
+    <span class="h-spacer"></span>
+    <div *ngIf="user;else guest">
+        <span class="r-padding">
+            <button style="background-color: whitesmoke" mat-flat-button routerLink="/goods">Товары</button>
+        </span>
+        <span class="r-padding">
+            <button style="background-color: whitesmoke" mat-flat-button routerLink="/purchases">Покупки</button>
+        </span>
+        <span class="r-padding">
+            <button style="background-color: whitesmoke" mat-flat-button>Корзина</button>
+        </span>
+        <span class="r-padding">
+            <button style="background-color: whitesmoke" mat-flat-button (click)="onLogout()">Выход</button>
+        </span>
+    </div>
+    <ng-template #guest>
+        <span class="r-padding">
+            <button style="background-color: whitesmoke" mat-flat-button routerLink="/login">Вход</button>
+        </span>
+    </ng-template>
+</mat-toolbar>
+<div class="v-spacer"></div>
+<router-outlet></router-outlet>
+<app-footer></app-footer>

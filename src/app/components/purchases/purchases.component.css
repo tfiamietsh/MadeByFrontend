@@ -1,0 +1,13 @@
+div {
+    height: 80vh;
+}
+
+.centered-text {
+    text-align: center;
+    width: 20%;
+}
+
+.spinner {
+    margin: 0 auto;
+    padding-bottom: 80px;
+}

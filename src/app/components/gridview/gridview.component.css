@@ -1,0 +1,39 @@
+div {
+    background-color: white;
+}
+
+.centred-text {
+    text-align: center;
+}
+
+.header {
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 400;
+    font-size: 32px;
+}
+
+.small {
+    font-size: 16px;
+    font-weight: 200;
+}
+
+.gray-small {
+    font-size: 16px;
+    font-weight: 200;
+    color: darkgray;
+}
+
+.anim {
+    transform: scale(1);
+    transition: transform 0.8s;
+}
+
+.anim:hover {
+    transform: scale(1.1);
+}
+
+.spinner {
+    margin: 0 auto;
+    padding-bottom: 80px;
+}

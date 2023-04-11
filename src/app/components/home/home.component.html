@@ -1,0 +1,13 @@
+<app-logo></app-logo>
+<div *ngIf="user;else guest">
+    <app-gridview [header]="'РЕКОМЕНДУЕМЫЕ ТОВАРЫ'" [items]="items"
+        [animation]="true"></app-gridview>
+    <app-panel [header]="'О СИСТЕМЕ РЕКОМЕНДАЦИЙ'"
+        [text]="'Система рекомендаций подбирает товары учитывая Ваши интересы.\nОна находит пользователей, которые купили те же товары, что и Вы, и выдает\nдругие покупки этих пользователей в качестве рекомендаций.'"
+        [shade]="0.67" [url]="'assets/default-image.png'" [height]="'400px'"></app-panel>
+</div>
+<ng-template #guest>
+    <app-panel [header]="'ВЫ НЕ ВОШЛИ В СИСТЕМУ'"
+        [text]="'Войдите в систему, чтобы получить рекомендации.'"
+        [shade]="0.67" [url]="'assets/default-image.png'" [height]="'400px'"></app-panel>
+</ng-template>

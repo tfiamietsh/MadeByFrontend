@@ -1,0 +1,18 @@
+td {
+    text-align: center;
+    vertical-align: middle;
+}
+
+.header {
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 400;
+    font-size: 32px;
+}
+
+.text {
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 300;
+    font-size: 24px;
+}

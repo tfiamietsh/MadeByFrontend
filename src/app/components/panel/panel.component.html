@@ -1,0 +1,13 @@
+<div>
+    <table style="{{tableStyle}}" cellpadding="0" cellspacing="0">
+        <tr style="{{trStyle}}">
+            <td>
+                <p [innerText]="header" class="header"></p>
+                <div *ngIf="header != ''">
+                    <p *ngIf="text != ''" [innerHTML]="separator" class="text"></p>
+                </div>
+                <p [innerText]="text" class="text"></p>
+            </td>
+        </tr>
+    </table>
+</div>

@@ -1,0 +1,35 @@
+mat-toolbar {
+    position: fixed;
+    height: 80px;
+    z-index: 1;
+}
+
+span {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 20px;
+}
+
+.h-spacer {
+    flex: 1 1 auto;
+}
+
+.v-spacer {
+    height: 80px;
+}
+
+.l-padding {
+    padding-left: 24px;
+}
+
+.r-padding {
+    padding-right: 24px;
+}
+
+.btn {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: lightgray;
+}

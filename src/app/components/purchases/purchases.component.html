@@ -1,0 +1,32 @@
+<div>
+    <mat-spinner *ngIf="dataSource.data.length==0; else notempty" class="spinner"></mat-spinner>
+    <ng-template #notempty>
+        <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+            <ng-container matColumnDef="icon">
+                <th class="centered-text" mat-header-cell *matHeaderCellDef> Превью </th>
+                <td class="centered-text" mat-cell *matCellDef="let item">
+                    <img matListItemAvatar src="{{src(item)}}" />
+                </td>
+            </ng-container>
+            <ng-container matColumnDef="title">
+                <th class="centered-text" mat-header-cell *matHeaderCellDef> Наименование </th>
+                <td class="centered-text" mat-cell *matCellDef="let item"> {{item.title}} </td>
+            </ng-container>
+            <ng-container matColumnDef="amount">
+                <th class="centered-text" mat-header-cell *matHeaderCellDef> Количество </th>
+                <td class="centered-text" mat-cell *matCellDef="let item"> {{item.amount}} </td>
+            </ng-container>
+            <ng-container matColumnDef="date">
+                <th class="centered-text" mat-header-cell *matHeaderCellDef> Дата покупки </th>
+                <td class="centered-text" mat-cell *matCellDef="let item"> {{item.date}} </td>
+            </ng-container>
+            <ng-container matColumnDef="time">
+                <th class="centered-text" mat-header-cell *matHeaderCellDef> Время покупки </th>
+                <td class="centered-text" mat-cell *matCellDef="let item"> {{item.time}} </td>
+            </ng-container>
+    
+            <tr mat-header-row *matHeaderRowDef="columns"></tr>
+            <tr mat-row *matRowDef="let row; columns: columns"></tr>
+        </table>
+    </ng-template>
+</div>

@@ -1,0 +1,15 @@
+@use '@angular/material' as mat;
+@include mat.core();
+
+$made_by_front-primary: mat.define-palette(mat.$indigo-palette);
+$made_by_front-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+$made_by_front-warn: mat.define-palette(mat.$red-palette);
+$made_by_front-theme: mat.define-light-theme((
+  color: (
+    primary: $made_by_front-primary,
+    accent: $made_by_front-accent,
+    warn: $made_by_front-warn,
+  )
+));
+
+@include mat.all-component-themes($made_by_front-theme);

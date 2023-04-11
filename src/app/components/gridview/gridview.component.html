@@ -1,0 +1,20 @@
+<div>
+    <p *ngIf="header" class="header">{{header}}</p>
+    <mat-spinner *ngIf="items.length==0; else notempty" class="spinner"></mat-spinner>
+    <ng-template #notempty>
+        <div *ngFor="let item of items" style={{style}}>
+            <img src="{{src(item)}}" style="display: block; margin-left: auto; margin-right: auto;" class="{{class}}" />
+            <div class="centred-text">
+                <p *ngIf="item.title" class="small">{{item.title}}</p>
+                <p>
+                    <span *ngIf="item.price" class="small">
+                        {{item.price.toFixed(2)}} р.
+                    </span>
+                    <span *ngIf="item.crossed_out_price" class="gray-small">
+                        <s>{{item.crossed_out_price.toFixed(2)}} р.</s>
+                    </span>
+                </p>
+            </div>
+        </div>
+    </ng-template>
+</div>
